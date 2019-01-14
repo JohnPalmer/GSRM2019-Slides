@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Research Methods</title>
+
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/beige.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+
+		<!-- In between the <div="reveal"> and the <div class="slides">-->
+		<header style="position: absolute;top: 5px; left: 5px; right: 5px; text-align: center; z-index:500; font-size:50px; color:white; padding: 5px; font-family: 'League Gothic', Impact, sans-serif"></header>
+		<footer style="position: absolute;bottom: 5px; left: 5px; text-align: center; z-index:500; font-size:12px;  padding: 5px; font-family: Arial, Helvetica, sans-serif"></footer>
+
+
+		<div class="slides">
+
+			<section>
+				<h1>Research Methods for Global Studies</h1>
+				<h3>Class 18: Presenting Quantitative Information Visually</h3>
+				<p><a href="http://johnrbpalmer.com">John Palmer</a></p>
+				</section>
+
+				<section>
+				<h2>Today's Slides</h2>
+				<ul>Todays' slides will be more detailed than usual so that you can get everything you need from this class regardless of whether you are here in person or on strike and reading this later. You will find notes at the bottom of each slide to walk you through the material. (Note that you may need to scroll down in the notes to see all the text.)<br><br><i>There is no penalty for not coming to class today.</i>
+				</ul>
+				<aside class="notes" data-markdown>
+				These are the speaker notes. Remember to scroll down to see all of the text here...
+
+				Keep scrolling...
+
+				Keep scrolling...
+
+				Good!
+				</aside>
+				</section>
+
+				<section>
+					<h2>Motivating Example</h2>
+					<p>Alice earns 25,000 euros per year; Bob earns 31,000. How can we best communicate this information in a chart?</p>
+						<aside class="notes" data-markdown>
+				For small amounts of relatively straightforward quantitative information, a chart or table may not be necessary. That would certainly be the case here. The numbers are clear in the text. In addition, note that we are talking here about two individual wages whereas we will often be more interested in presenting distributions or differences between distributions. We will get to that.
+				</aside>
+				</section>
+
+				<section data-background="../images/alice_bob_bar_badaxes1.png", data-background-size="contain">				<div>&nbsp;</div>
+				</section>
+
+
+<section data-background="../images/alice_bob_bar_badaxes2.png", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+				<section>
+					<p>What are the problems with these charts?</p>
+						<aside class="notes" data-markdown>
+				Even when displaying simple information, it is easy to make mistakes. The problem with these two charts is that the y-axis is drawn in such a way as to distort the difference. In the first chart, the axis ranges from 0 to 100,000, making the difference look relatively inconsequential. In the second, the axis ranges from 24,000 to 32,000, making the difference look huge. It is possible that there could be a reason to draw the chart in one of these ways, but a better approach is almost certainly be to start at 0 and end slightly above the highest value.
+				</aside>
+				</section>
+
+<section data-background="../images/alice_bob_bar.png", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+
+				<section>
+					<p>What about this last one?</p>
+						<aside class="notes" data-markdown>
+				By letting the y-axis range from 0 to just over 31,000 we can better compare the two wages to each other and compare teh difference to each of them. Our interest, of course, may be on the difference or gap in wages here. We could calculate this by subtracting Alice's wages from Bob's, but then we would be left with one value (6,000) and it might be hard to put it into context. If this represents a wage gap in a country we are familiar with, then perhaps we do not need more information. But if we do not know the wage structure or generally how much things cost, then it is heard to know if 6,000 is a large or small amount in practical terms. By showing the two earnings side by side, at least we can compare the gap to the earnings themselves.
+				</aside>
+				</section>
+
+				<section>
+					<p>Don't we care more about population distributions than individuals?</p>
+				<aside class="notes" data-markdown>
+				Of course that depends on what we are talking about and for what purpose, but in this case, understanding the difference in the distribution of mens' and womens' wages is more interesting (for many purposes) than understanding the difference in the wages of two individuals. Here is one example, using the actual mean wages for industry, construction, and services in Spain in 2014, and generating a synthetic distribution of individual wages by drawing randomly from Guassian distributions with arbitrary standard deviations. (So what follows in the next two plots is just for demonstration purposes.) 
+				</aside>
+				</section>
+
+				<section data-background="../images/male_female_densities.png", data-background-size="contain">
+				<div>&nbsp;</div>
+				</section>
+
+				<section>
+					<p>Can we improve this plot?</p>
+				<aside class="notes" data-markdown>
+				Since there are only two categories, it is unnecessary to use the side legend. We could easily place the labels directly on the plot, making it easier to read. We can also play with different color combinations to improve the look.
+				</aside>
+				</section>
+
+				<section data-background="../images/male_female_densities_better.png", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+				<section>
+					<p>What if we want to compare multiple countries or years?</p>
+				<aside class="notes" data-markdown>
+				Density plots are nice for visualizing full distributions, but for making multiple comparisons, we often prefer to simplify things by simply taking means or medians from each distribution. What follows is a chart using real data for the past 5 years.
+				</aside>
+				</section>
+
+<section>
+	<iframe src="https://data.oecd.org/chart/56yC" width="860" height="645" style="border: 0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true"><a href="https://data.oecd.org/chart/56yC" target="_blank">OECD Chart: Gender wage gap, Total, % of male median wage, Annual, 2016 or latest available</a></iframe>
+</section>
+
+				<section>
+					<p>What is this chart showing us? Can you write a more descriptive caption for it?</p>
+				</section>
+
+
+				<section>
+				<h2>Planning a figure</h2>
+				<ul>
+				<li>Qualitative or quantitative information?</li>
+				<li>Variables, variable types, subsets</li>
+				<li>Format</li>
+				<li>Audience</li>
+				<li>Message</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				In planning your visual presentation, you will want to start by considering:
+
+				* What type of information is this? Is it qualitative or quantitative?
+				* If quantitative, how many variables do you want to represent? What types of variables are they? Are there subsets that information should be grouped in?
+				* What is the format of this presentation? A scientific paper? A policy paper? A poster? Slides?
+				* Who is your audience? How sophisticated are they in terms of interpreting quantitative data? What types of charts are they used to?
+				* What message are you trying to convey? What is the purpose of this chart?
+				</aside>
+				</section>
+
+
+			<section>
+				<h2>Linking figures to text</h2>
+				<ul>
+				<li>Describe every figure in text.</li>
+				<li>Refer to figures as, e.g., Figure 1, Table 1...</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				Describe every figure in text, explaining what reader should take away from it.
+				</aside>
+				</section>
+
+
+			<section>
+				<h2>Make figures self-explanatory</h2>
+				<ul>
+				<li>Add enough information in each figure caption so that figure can be understood without the main text.</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				The information in the caption should make it possible for the reader to interpret the figure but should not include the interpretation itself.
+				</aside>
+				</section>
+
+			<section>
+				<h2>Make figures tell the story</h2>
+				<ul>
+				<li>Ideally, reader should be able to read only the figures and understand the "story" you are telling.</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				Making this possible is a matter of creating the right charts and adding clear, informative captions
+				</aside>
+				</section>
+
+			<section>
+				<p>Consider the charts used in the <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Gender_pay_gap_statistics#cite_ref-1">most recent Eurostat report on the gender wage gap</a>. What works well here? What would you improve?</p>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/c/c3/UnadjustedGPG_Figure1.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/b/b9/UnadjustedGPG_Figure2.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/1/18/UnadjustedGPG_Table1.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/f/f4/UnadjustedGPG_Table2.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/8/85/UnadjustedGPG_Table3.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/8/85/UnadjustedGPG_Figure3.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+			<section>
+				<h2>Implementation in Excel</h2>
+					<p>Download the source data for this report <a href="http://ec.europa.eu/eurostat/statistics-explained/images/2/23/Unadjusted_GPG_March_2018_update_07.03.2018-update.xls">here</a>. Try to replicate and/or improve the charts using Excel.</p>
+				</section>
+
+		<section>
+				<h2>Implementation in R</h2>
+					<p><a href="../r_demo_class18.R">R Script</a></p>
+					<p>(I will update this script online after the class with all final changes that we make to the script in class.)
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<!-- FOOTERS -->
+<style>.zagheni footer:after { content: "Zagheni & Weber (2012), WebSci 2012, doi: 10.1145/2380718.2380764"; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+<style>.DMC2018 footer:after { content: "Diana Mata‐Codesal, Is it simpler to leave or to stay put? Desired immobility in a Mexican village, Popul Space Place. 2017;e2127, https://doi.org/10.1002/psp.2127."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		
+<style>.natcoms footer:after { content: "Palmer et al., Nature Communications (2017), https://doi.org/10.1038/s41467-017-00914-9"; color:white;background-color: rgba(0,0,0,0.9);padding:5px;}</style>
+
+		<style>.gubrium_holstein_1997 footer:after { content: "See Gubrium, J. F., & Holstein, J. A. (1997). The new language of qualitative method."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.sidewalk footer:after { content: "Duneier, M. Sidewalk. (Straus and Giroux, 1999)."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+
+		<style>.sidewalk_voices footer:after { content: "Duneier, M., & Back, L. (2006). Voices from the sidewalk: Ethnography and writing race. Ethnic and Racial Studies, 29(3), 543-565."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.kvale_bryman footer:after { content: "From Bryman (2008), Social Research Methods, and Kvale (1996), InterViews."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.kvale footer:after { content: "From Kvale (1996), InterViews."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<!-- END FOOTERS -->
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Transition style
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				showNotes: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+				{ src: '../plugin/markdown/marked.js' },
+				{ src: '../plugin/markdown/markdown.js' },
+				{ src: '../plugin/notes/notes.js', async: true },
+				{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '../plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+	</body>
+	</html>
