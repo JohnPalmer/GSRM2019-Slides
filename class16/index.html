@@ -33,148 +33,192 @@
 
 			<section>
 				<h1>Research Methods for Global Studies</h1>
-				<h3>Class 16: Big Data and Emerging Methods</h3>
-				<p><a href="http://johnrbpalmer.com">John Palmer</a></p>
-				</section>
-
-					<section>
-					<h2>The Google Flu Trends Parable</h2>
-					<a href="http://science.sciencemag.org/content/343/6176/1203.full">Lazer et al. (2014)</a>
+				<h3>Class 16: Presenting Quantitative Information Visually</h3>
+					<p>Abelardo Gómez Díaz</p>
 				</section>
 
 				<section>
-					<p>novelty</p> 
-					<p>vs.</p>
-					<p>implementation</p>
-				</section>
-
-				<section>
-				<h3>Original GFT</h3>
-				<ul><li>Regress CDC-reported ILI proportion on mean trend for 45 search terms with strongest correlation to ILI</li>
-				<li>Predictions at time <i>t</i> 1-2 weeks ahead of CDC's release</li>
+				<h2>Today's Slides</h2>
+				<ul>Todays' slides will be more detailed than usual so that you can get everything you need from this class regardless of whether you are here in person or on strike and reading this later. You will find notes at the bottom of each slide to walk you through the material. (Note that you may need to scroll down in the notes to see all the text.)<br><br><i>There is no penalty for not coming to class today.</i>
 				</ul>
+				<aside class="notes" data-markdown>
+				These are the speaker notes. Remember to scroll down to see all of the text here...
+
+				Keep scrolling...
+
+				Keep scrolling...
+
+				Good!
+				</aside>
+				</section>
+
+				<section>
+					<h2>Motivating Example</h2>
+					<p>Alice earns 25,000 euros per year; Bob earns 31,000. How can we best communicate this information in a chart?</p>
+						<aside class="notes" data-markdown>
+				For small amounts of relatively straightforward quantitative information, a chart or table may not be necessary. That would certainly be the case here. The numbers are clear in the text. In addition, note that we are talking here about two individual wages whereas we will often be more interested in presenting distributions or differences between distributions. We will get to that.
+				</aside>
+				</section>
+
+				<section data-background="../images/alice_bob_bar_badaxes1.png", data-background-size="contain">				<div>&nbsp;</div>
+				</section>
+
+
+<section data-background="../images/alice_bob_bar_badaxes2.png", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+				<section>
+					<p>What are the problems with these charts?</p>
+						<aside class="notes" data-markdown>
+				Even when displaying simple information, it is easy to make mistakes. The problem with these two charts is that the y-axis is drawn in such a way as to distort the difference. In the first chart, the axis ranges from 0 to 100,000, making the difference look relatively inconsequential. In the second, the axis ranges from 24,000 to 32,000, making the difference look huge. It is possible that there could be a reason to draw the chart in one of these ways, but a better approach is almost certainly be to start at 0 and end slightly above the highest value.
+				</aside>
+				</section>
+
+<section data-background="../images/alice_bob_bar.png", data-background-size="contain">				
+				<div>&nbsp;</div>
 				</section>
 
 
 				<section>
-				<h4>Search Term Selection</h4>
-				<img class="stretch" src="../google_correlate.png">
+					<p>What about this last one?</p>
+						<aside class="notes" data-markdown>
+				By letting the y-axis range from 0 to just over 31,000 we can better compare the two wages to each other and compare teh difference to each of them. Our interest, of course, may be on the difference or gap in wages here. We could calculate this by subtracting Alice's wages from Bob's, but then we would be left with one value (6,000) and it might be hard to put it into context. If this represents a wage gap in a country we are familiar with, then perhaps we do not need more information. But if we do not know the wage structure or generally how much things cost, then it is heard to know if 6,000 is a large or small amount in practical terms. By showing the two earnings side by side, at least we can compare the gap to the earnings themselves.
+				</aside>
 				</section>
 
 				<section>
-				<h4>Search Term Selection</h4>
-				<img class="stretch" src="../google_correlate_scatter.png">
+					<p>Don't we care more about population distributions than individuals?</p>
+				<aside class="notes" data-markdown>
+				Of course that depends on what we are talking about and for what purpose, but in this case, understanding the difference in the distribution of mens' and womens' wages is more interesting (for many purposes) than understanding the difference in the wages of two individuals. Here is one example, using the actual mean wages for industry, construction, and services in Spain in 2014, and generating a synthetic distribution of individual wages by drawing randomly from Guassian distributions with arbitrary standard deviations. (So what follows in the next two plots is just for demonstration purposes.) 
+				</aside>
 				</section>
 
-
-				<section>
-				<h3>Revised GFT</h3>
-				<ul><li>Additional search terms used</li>
-				</ul>
-				</section>
-
-				<section>
-				<h3>GFT</h3>
-			$$ \text{logit}[I(t)] = \alpha + \beta \left( \text{logit}[Q_i(t)] \right) + e $$ 
-				</section>
-
-
-				<section>
-				<h4>GFT limits</h4>
-				<ul>
-				<li>2009: Misrepresented epidemic curve and needed to be manually updated</li>
-				<li>2012-13: analysis suggested GFT inferior to traditional methods</li>
-				</ul>
+				<section data-background="../images/male_female_densities.png", data-background-size="contain">
+				<div>&nbsp;</div>
 				</section>
 
 				<section>
-				<p>Why?</p>
+					<p>Can we improve this plot?</p>
+				<aside class="notes" data-markdown>
+				Since there are only two categories, it is unnecessary to use the side legend. We could easily place the labels directly on the plot, making it easier to read. We can also play with different color combinations to improve the look.
+				</aside>
+				</section>
+
+				<section data-background="../images/male_female_densities_better.png", data-background-size="contain">				
+				<div>&nbsp;</div>
 				</section>
 
 				<section>
-				<h4>GFT weaknesses</h4>
-				<ul>
-				<li>ignored variability in search terms</li>
-				<li>relied on investigator opinion</li>
-				<li>ignored changes in algorithm and search behavior over time</li>
-				<li>hidden methods</li>
-				</ul>
+					<p>What if we want to compare multiple countries or years?</p>
+				<aside class="notes" data-markdown>
+				Density plots are nice for visualizing full distributions, but for making multiple comparisons, we often prefer to simplify things by simply taking means or medians from each distribution. What follows is a chart using real data for the past 5 years.
+				</aside>
 				</section>
 
-
-				<section>
-				<h3>Extensions and Improvements?</h3>
-				</section>
-
-				<section>
-				<h4>Mosquito Trend?</h4>
-				<img class="stretch" src="../mosquito_trend.png"> 
-				</section>
-
-
-				<section>
-				<h2>Machine Learning</h2>
-				</section>
-
-				<section>
-				<h4>Machine Learning Trend</h4>
-				<img class="stretch" src="../machine_learning_trend.png"> 
-				</section>
-
-				<section>
-				<h4>Research Methods Trend</h4>
-				<img class="stretch" src="../research_methods_trend.png"> 
-				</section>
-
-				<section>
-				<h3>Machine Learning</h3>
-				<ul style="list-style: none;"><li>"the study of data-driven methods capable of mimicking, understanding and aiding human and biological information processing tasks."</li>
-				<li>--David Barber, Bayesian reasoning and machine learning. (Cambridge University Press, 2012).
-				</section>
-				
-				<section>
-				<h3>Machine Learning</h3>
-				<ul><li><b>Supervised</b>: Computer given training set of inputs and outputs</li>
-				<li><b>Unsupervised</b>: Computer is tasked with finding structure in data without initial labels.</li>
-				<li><b>Reinforcement</b>: Computer interacts with dynamic environment and is given feedback as it goes.</li>
-				</ul>
-				</section>
-
-						<section>
-				<h4>Unsupervised Learning Example: Clustering</h4>
-				<img src="../images/unclustered_map.png" class="stretch">
-				</section>
-
-				<section>
-			<h4>Unsupervised Learning Example: Clustering</h4>
-				<img src="../images/unclustered_map_closeup.png" class="stretch">
-				</section>
-
-				<section>
-				<p>How can we assign points to groups?</p>
-				</section>
-
-
-				<section>
-				<h4>"K-means" Clustering</h4>
-				$$\textrm{arg min}\sum_{i=1}^k\sum_{x_j \in s_i}\left(x_j - \mu_i \right)^2$$
-				</section>
-
-				<section>
-				<h4>"K-means" Clustering</h4>
-				<img src="../images/clustered_map.png" class="stretch">
-				</section>
-
-
-				<section>
-					<h2>R examples</h2>
-				</section>
-
-				<section>
-<p><a href="../demos/class16.R">R Script</a></p>
-<p><a href="../demos/class16.zip">Data</a></p>
+<section>
+	<iframe src="https://data.oecd.org/chart/56yC" width="860" height="645" style="border: 0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true"><a href="https://data.oecd.org/chart/56yC" target="_blank">OECD Chart: Gender wage gap, Total, % of male median wage, Annual, 2016 or latest available</a></iframe>
 </section>
 
+				<section>
+					<p>What is this chart showing us? Can you write a more descriptive caption for it?</p>
+				</section>
+
+
+				<section>
+				<h2>Planning a figure</h2>
+				<ul>
+				<li>Qualitative or quantitative information?</li>
+				<li>Variables, variable types, subsets</li>
+				<li>Format</li>
+				<li>Audience</li>
+				<li>Message</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				In planning your visual presentation, you will want to start by considering:
+
+				* What type of information is this? Is it qualitative or quantitative?
+				* If quantitative, how many variables do you want to represent? What types of variables are they? Are there subsets that information should be grouped in?
+				* What is the format of this presentation? A scientific paper? A policy paper? A poster? Slides?
+				* Who is your audience? How sophisticated are they in terms of interpreting quantitative data? What types of charts are they used to?
+				* What message are you trying to convey? What is the purpose of this chart?
+				</aside>
+				</section>
+
+
+			<section>
+				<h2>Linking figures to text</h2>
+				<ul>
+				<li>Describe every figure in text.</li>
+				<li>Refer to figures as, e.g., Figure 1, Table 1...</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				Describe every figure in text, explaining what reader should take away from it.
+				</aside>
+				</section>
+
+
+			<section>
+				<h2>Make figures self-explanatory</h2>
+				<ul>
+				<li>Add enough information in each figure caption so that figure can be understood without the main text.</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				The information in the caption should make it possible for the reader to interpret the figure but should not include the interpretation itself.
+				</aside>
+				</section>
+
+			<section>
+				<h2>Make figures tell the story</h2>
+				<ul>
+				<li>Ideally, reader should be able to read only the figures and understand the "story" you are telling.</li>
+				</ul>
+				<aside class="notes" data-markdown>
+				Making this possible is a matter of creating the right charts and adding clear, informative captions
+				</aside>
+				</section>
+
+			<section>
+				<p>Consider the charts used in the <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Gender_pay_gap_statistics#cite_ref-1">most recent Eurostat report on the gender wage gap</a>. What works well here? What would you improve?</p>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/c/c3/UnadjustedGPG_Figure1.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/b/b9/UnadjustedGPG_Figure2.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/1/18/UnadjustedGPG_Table1.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/f/f4/UnadjustedGPG_Table2.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/8/85/UnadjustedGPG_Table3.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+
+		<section data-background="http://ec.europa.eu/eurostat/statistics-explained/images/8/85/UnadjustedGPG_Figure3.PNG", data-background-size="contain">				
+				<div>&nbsp;</div>
+				</section>
+
+			<section>
+				<h2>Implementation in Excel</h2>
+					<p>Download the source data for this report <a href="http://ec.europa.eu/eurostat/statistics-explained/images/2/23/Unadjusted_GPG_March_2018_update_07.03.2018-update.xls">here</a>. Try to replicate and/or improve the charts using Excel.</p>
+				</section>
+
+		<section>
+				<h2>Implementation in R</h2>
+					<p><a href="../r_demo_class18.R">R Script</a></p>
+					<p>(I will update this script online after the class with all final changes that we make to the script in class.)
+				</section>
 
 
 
@@ -209,7 +253,9 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+				// Transition style
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				showNotes: true,
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 				{ src: '../plugin/markdown/marked.js' },
